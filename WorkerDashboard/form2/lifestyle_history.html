@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pregnant Women Registration</title>
+  <link rel="stylesheet" type="text/css" href="form2_styles.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+<body>
+  <header>
+    <div class="top-section">
+      <div class="site-name">
+        <h1>PAALAN</h1>
+        <h2 class="subheading">PREGNANT WOMEN DETAILS</h2>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="form-container">
+      <h2>Lifestyle Details</h2>
+      <form id="personalDetailsForm">
+        <!-- <div class="form-group">
+            <label for="smokingStatus">Smoking Status:</label>
+            <input type="text" class="form-control" id="smokinfggStatus" placeholder="Enter your smoking status">
+          </div> -->
+          <div class="form-group">
+            <label for="smokingStatus">Smoking Status:</label>
+            <select class="form-control" id="smokingStatus" required>
+              <option value="" selected disabled>Smoking Status</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="Rare">Rare</option>
+            </select>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="alcoholConsumption">Alcohol Consumption:</label>
+            <input type="text" class="form-control" id="alcoholConsumption" placeholder="Enter your alcohol consumption status">
+          </div> -->
+          <div class="form-group">
+            <label for="alcoholConsumption">Alcohol Consumption:</label>
+            <select class="form-control" id="alcoholConsumption" required>
+              <option value="" selected disabled>Alcohol Consumption</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="Rare">Rare</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="substanceAbuseHistory">Substance Abuse History:</label>
+            <input type="text" class="form-control" id="substanceAbuseHistory" placeholder="Enter your substance abuse history">
+          </div>
+          <!-- <div class="form-group">
+            <label for="exerciseRoutine">Exercise Routine:</label>
+            <input type="text" class="form-control" id="exerciseRoutine" placeholder="Enter your exercise routine">
+          </div> -->
+          <div class="form-group">
+            <label for="exerciseRoutine">Exercise Routine:</label>
+            <select class="form-control" id="exerciseRoutine" required>
+              <option value="" selected disabled>Exercise Routine</option>
+              <option value="ExerciseDaily">ExerciseDaily</option>
+              <option value="no_exercise">Don't exercise</option>
+              <option value="Sometimes">Sometimes</option>
+            </select>
+          </div>
+
+        <!-- <button type="submit" class="btn btn-primary" onclick="submitForEmergencyContactForm()">Next</button> -->
+        <!-- Navigation Buttons -->
+        <div class="form-group buttons">
+          <button type="button" class="btn btn-primary" onclick="goToPreviousPage()">Previous</button>
+          <button type="submit" class="btn btn-primary" onclick="submitForEmergencyContactForm()">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Personal details Form Submission
+    function submitForEmergencyContactForm() {
+        window.location.href = "emergency_contact.html";
+    }
+    
+    function goToPreviousPage() {
+        window.location.href = "obstetric_history.html";
+    }
+    
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
