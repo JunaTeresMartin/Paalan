@@ -129,6 +129,7 @@ $panchayatName = $row['panchayat_name'];
         <tr>
           <th>Child Name</th>
           <th>Age</th>
+          <th>Gender</th>
           <th>BMI Percentage</th>
           <th>Comment</th>
         </tr>
@@ -153,6 +154,7 @@ $panchayatName = $row['panchayat_name'];
         while ($row = mysqli_fetch_assoc($result)) {
           $childName = $row['child_name'];
           $childAge = $row['child_age'];
+          $gender = $row['gender'];
           $height = $row['height'];
           $weight = $row['weight'];
 
@@ -178,6 +180,7 @@ $panchayatName = $row['panchayat_name'];
           <tr>
             <td><?php echo $childName; ?></td>
             <td><?php echo $childAge; ?></td>
+            <td><?php echo $gender; ?></td>
             <td><?php echo $bmiPercentage; ?></td>
             <td><?php echo $comment; ?></td>
           </tr>

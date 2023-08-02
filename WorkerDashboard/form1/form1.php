@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
     $mother_id = $_POST['mother_id'];
     $child_age = $_POST['childAge'];
     $child_dob = $_POST['childDOB'];
+    $gender=$_POST['gender'];
     $child_mp = $_POST['childMP'];
     $child_blockNumber = $_POST['childBlockNo'];
     $child_city = $_POST['childCity'];
@@ -33,8 +34,8 @@ if (isset($_POST['submit'])) {
     $child_guardian_phone_no = $_POST['Guardian_no'];
 
     // SQL query to insert the form data into the table
-    $sql = "INSERT INTO child_details (woman_id, child_name, child_age, child_dob, child_mp, child_blockNumber, child_city, child_district, father_name, father_occupation,mother_name,mother_occupation,no_of_family_members,annual_income,medical_issue_details,child_guardian_phone_no )
-            VALUES ('$mother_id','$child_name', '$child_age', '$child_dob', '$child_mp', '$child_blockNumber', '$child_city', '$child_district', '$father_name', '$father_occupation','$mother_name','$mother_occupation','$no_of_family_members','$annual_income','$medical_issue_details','$child_guardian_phone_no')";
+    $sql = "INSERT INTO child_details (woman_id, child_name, gender, child_age, child_dob, child_mp, child_blockNumber, child_city, child_district, father_name, father_occupation,mother_name,mother_occupation,no_of_family_members,annual_income,medical_issue_details,child_guardian_phone_no )
+            VALUES ('$mother_id','$child_name', $gender,'$child_age', '$child_dob', '$child_mp', '$child_blockNumber', '$child_city', '$child_district', '$father_name', '$father_occupation','$mother_name','$mother_occupation','$no_of_family_members','$annual_income','$medical_issue_details','$child_guardian_phone_no')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         header("Location:form1.html");

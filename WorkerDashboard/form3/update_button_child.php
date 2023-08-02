@@ -202,13 +202,20 @@ if(isset($_POST['submit'])){
           <div class="col">
               <div class="form-group">
                   <label for="height">Child Height:</label>
-                  <input type="number" class="form-control" id="height" name="height" placeholder="Enter child height" required value=<?php echo $height;?>>
+                  
+                  <!-- Height -->
+                  <input type="number" class="form-control" id="height" name="height" placeholder="Enter child height" required step="0.1" value="<?php echo htmlspecialchars($height, ENT_QUOTES); ?>">
+
+                  
+
               </div>
           </div>
           <div class="col">
                 <div class="form-group">
                     <label for="weight">Child weight:</label>
-                    <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter child weight" required value=<?php echo $weight;?>>
+                    
+                    <!-- Weight -->
+                  <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter child weight" required step="0.1" value="<?php echo htmlspecialchars($weight, ENT_QUOTES); ?>">
                 </div>
             </div>
         </div>

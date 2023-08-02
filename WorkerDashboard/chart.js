@@ -46,32 +46,32 @@ fetch('data.php')
         var barChart = new Chart(document.getElementById('barChart'), {
             type: 'bar',
             data: {
-                labels: data.names,
+                labels: ['Boys', 'Girls'],
                 datasets: [{
-                    label: 'Weight',
-                    data: data.weights,
+                    label: 'Count',
+                    data: [data.boysCount, data.girlsCount],
+                    Color: 'red',
                     borderWidth: 1,
-                    backgroundColor: 'orange'
-                    
+                    backgroundColor: ['blue', 'red'] 
                 }]
             },
             options: {
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Child Weight'
+                    text: 'Number of Boys and Girls'
                 },
                 scales: {
                     xAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'Child Names'
+                            labelString: 'Gender'
                         }
                     }],
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'Weight (kg)'
+                            labelString: 'Count'
                         }
                     }]
                 }

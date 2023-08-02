@@ -7,14 +7,20 @@ $dbname = "Paalan";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$boysCount = 0;
+$girlsCount = 0;
 
 // Fetch data from the table
 $sql = "SELECT child_name, height, weight FROM child_details";
 $result = $conn->query($sql);
+
+
+
 
 // Create arrays to store data
 $names = array();
@@ -31,6 +37,19 @@ if ($result->num_rows > 0) {
     echo "No data found";
 }
 
+//gender data
+$sql2 = "SELECT gender, COUNT(*) AS count FROM child_details GROUP BY gender";
+$result2 = mysqli_query($conn, $sql2);
+
+while ($row2 = mysqli_fetch_assoc($result2)) {
+    if ($row2['gender'] === 'Boy') {
+        $boysCount = $row2['count'];
+    } elseif ($row2['gender'] === 'Girl') {
+        $girlsCount = $row2['count'];
+    }
+}
+
+
 // Close the database connection
 $conn->close();
 
@@ -38,7 +57,9 @@ $conn->close();
 $data = array(
     "names" => $names,
     "heights" => $heights,
-    "weights" => $weights
+    "weights" => $weights,
+    "boysCount" => $boysCount,
+    "girlsCount" => $girlsCount
 );
 
 header('Content-Type: application/json');

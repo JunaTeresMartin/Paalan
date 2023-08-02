@@ -4,6 +4,8 @@
   <title>Pregnant Women Registration</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <!-- CSS -->
   <style>
@@ -14,7 +16,14 @@
 
     header {
       background-color: #f2f2f2;
-      padding: 20px;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 0;
+      z-index: 999;
     }
 
     .top-section {
@@ -29,6 +38,75 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    .sidebar {
+  position: fixed;
+  top: 97px; 
+  left: 0;
+  width: 230px;  
+  height: 100%;  
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  z-index: 999;
+}
+  
+ 
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 30px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .sidebar li:hover{
+    background-color: #333;
+    font-size: large;
+    color:#FFEA20; 
+  }
+  
+  .sidebar li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  
+  .sidebar li a:hover {
+    color: #FFEA20;
+  }
+
+.left-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-section ul li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  /* new */
+  padding: 10px;
+  
+}
+
+.left-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: large;
+  /* new */
+  margin-top: 20px;
+}
+
+.left-section ul li a:hover {
+  color: #FFEA20;
+}
 
     .site-name {
       display: flex;
@@ -48,6 +126,8 @@
     .form-container {
       max-width: 800px;
       margin: 50px auto;
+      margin-top: 150px;
+      margin-left: 220px;
       padding: 20px;
       background-color: #ffffff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,8 +147,25 @@
         <h1>PAALAN</h1>
         <h2 class="subheading">PREGNANT WOMEN DETAILS</h2>
       </div>
+      <div class="left-section">
+        <ul>
+          <li><a href="../index.php">Home</a></li>
+        </ul>
+      </div>
     </div>
   </header>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#visualization" class="icon-a"><i class="bi bi-graph-up"></i>&nbsp;&nbsp;Charts</a></li>
+      <li><a href="#bmi" class="icon-a"><i class="bi bi-table"></i>&nbsp;&nbsp;BMI</a></li>
+      <li><a href="../AdminDashboard/registration/stock.php" class="icon-a"><i class="bi bi-table"></i>&nbsp;&nbsp;Stock Request</a></li>
+      <li><a href="feedback.php" class="icon-a"><i class="bi bi-chat-left-text"></i>&nbsp;&nbsp;Feedback</a></li>
+      <li><a href="logout.php" class="icon-a"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;Logout</a></li>
+      <li ><a href="help.html" class="icon-a"><i class="bi bi-info-circle"></i>&nbsp;&nbsp;Help</a></li>
+    </ul>
+  </div>
+
   <div class="container">
     <div class="form-container">
       <h2>Registration Form</h2>
