@@ -208,7 +208,7 @@
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Quantity'
+                            text: 'Quantity (Kg)'
                         }
                     },
                     x: {
