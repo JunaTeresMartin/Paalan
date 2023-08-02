@@ -106,8 +106,7 @@ session_start();
                 <a href="changepassword.php">Change Password</a>
             </div>
         </div>
-                    <!-- <span class="username" style="margin-right:1000px;" > -->
-                    <div class="welcome-message">
+        <div class="welcome-message">
                 Welcome..........
             </div>
             <div class="username">
@@ -115,8 +114,6 @@ session_start();
                 echo htmlspecialchars($_SESSION['username']); 
                 ?>
             </div>
-                        
-                       
                         
                     </span>
                 </div>
