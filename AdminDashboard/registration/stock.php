@@ -213,25 +213,64 @@
 
     <div class="main-content">
     <p class="logo"><span>Paa</span>lan</p>
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <label for="stock_item">Stock Item:</label>
-            <input type="text" id="stock_item" name="stock_item" required>
+    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <label for="stock_item">Stock Item:</label>
+        <select id="stock_item" name="stock_item" required onchange="updateQuantityUnitLabel()">
+            <option value="">Select an item</option>
+            <option value="payar">Payar</option>
+            <option value="kadala">Kadala</option>
+            <option value="oil">Oil</option>
+            <option value="parippu">Parippu</option>
+            <option value="rice">Rice</option>
+            <option value="raagi">Raagi</option>
+        </select>
 
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" required>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
 
-            <label for="defect_question">Is there any defect?</label>
-            <select id="defect_question" name="defect_question" onchange="toggleDefectDetails()">
-                <option value="No">No</option>
-                <option value="Yes">Yes</option>
-            </select>
+        <label id="quantity_label" for="quantity">Quantity in kg</label>
 
-            <div id="defect_details" style="display: none;">
-                <label for="defect_details">Defect Details:</label>
-                <textarea id="defect_details" name="defect_details"></textarea>
-            </div>
+        <label for="defect_question">Is there any defect?</label>
+        <select id="defect_question" name="defect_question" onchange="toggleDefectDetails()">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
 
-            <button type="submit">Order Placed</button>
+        <div id="defect_details" style="display: none;">
+            <label for="defect_details">Defect Details:</label>
+            <textarea id="defect_details" name="defect_details"></textarea>
+        </div>
+
+        <button type="submit" name="submit">Place order</button>
+    </form>
+</div>
+
+<script>
+    function updateQuantityUnitLabel() {
+        const stockItemDropdown = document.getElementById('stock_item');
+        const quantityLabel = document.getElementById('quantity_label');
+
+        const selectedStockItem = stockItemDropdown.value;
+        if (selectedStockItem === 'oil') {
+            quantityLabel.textContent = 'Quantity in litres';
+        } else {
+            quantityLabel.textContent = 'Quantity in kg';
+        }
+    }
+
+    function toggleDefectDetails() {
+        const defectQuestionDropdown = document.getElementById('defect_question');
+        const defectDetailsDiv = document.getElementById('defect_details');
+
+        if (defectQuestionDropdown.value === 'Yes') {
+            defectDetailsDiv.style.display = 'block';
+        } else {
+            defectDetailsDiv.style.display = 'none';
+        }
+    }
+</script>
+
+
         </form>
     </div>
 </body>
