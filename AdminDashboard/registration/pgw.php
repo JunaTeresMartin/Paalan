@@ -177,7 +177,7 @@ $result = display_data($search);
                                     <tbody>
                                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                             <tr>
-                                                <td><?php echo $row['id']; ?></td>
+                                                <!-- <td><?php echo $row['id']; ?></td> -->
                                                 <td><?php echo $row['firstName']; ?></td>
                                                 <td><?php echo $row['lastName']; ?></td>
                                                 <td><?php echo $row['age']; ?></td>
