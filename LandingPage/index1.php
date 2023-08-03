@@ -74,6 +74,7 @@ function handleMessage($message) {
     // Predefined keywords and their corresponding responses
     $keywords = array(
         'hai' => 'Hello, My name is Sevake. How can I help you to understand about the schemes and their eligibility provided by the government?',
+        'Hai' => 'Hello, My name is Sevake. How can I help you to understand about the schemes and their eligibility provided by the government?',
         'help' => 'Sure, I can help you with information about schemes available for women and child development in India. Please provide the name of the scheme you want to know about.',
         'thank you' => 'You\'re welcome! If you have any more questions, feel free to ask.',
         'New Schemes'=> getAllSchemes(),
