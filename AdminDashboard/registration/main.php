@@ -111,7 +111,7 @@ session_start();
             </div>
             <div class="username">
                 <?php 
-                echo htmlspecialchars($_SESSION['username']); 
+                echo ($_SESSION['username']); 
                 ?>
             </div>
                         

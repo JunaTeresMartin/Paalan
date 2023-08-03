@@ -217,12 +217,12 @@
         <label for="stock_item">Stock Item:</label>
         <select id="stock_item" name="stock_item" required onchange="updateQuantityUnitLabel()">
             <option value="">Select an item</option>
-            <option value="payar">Payar</option>
-            <option value="kadala">Kadala</option>
-            <option value="oil">Oil</option>
-            <option value="parippu">Parippu</option>
-            <option value="rice">Rice</option>
-            <option value="raagi">Raagi</option>
+            <option value="payar">payar</option>
+            <option value="kadala">kadala</option>
+            <option value="oil">oil</option>
+            <option value="parippu">parippu</option>
+            <option value="rice">rice</option>
+            <option value="raagi">raagi</option>
         </select>
 
         <label for="quantity">Quantity:</label>
