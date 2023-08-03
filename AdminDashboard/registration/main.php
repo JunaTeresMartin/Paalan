@@ -107,7 +107,7 @@ session_start();
             </div>
         </div>
         <div class="welcome-message">
-                Welcome..........admin
+                Welcome Admin
             </div>
             <div class="username">
                 <?php 
