@@ -98,6 +98,7 @@ $result = display_data();
         table {
             border-collapse: collapse;
             margin-bottom: 150px;
+            width: 100%;
         }
 
         th, td {
