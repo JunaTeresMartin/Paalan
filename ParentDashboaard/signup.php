@@ -102,7 +102,7 @@ body{
         
         <?php
         //  include("php/config.php");
-        $con = mysqli_connect("localhost","root","","Paalan") or die("Couldn't connect");
+        $con = mysqli_connect("localhost","root","","paalan") or die("Couldn't connect");
          if(isset($_POST['submit'])){ // click submit
             $username = $_POST['username'];
             $email = $_POST['email'];

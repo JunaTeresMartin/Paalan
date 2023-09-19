@@ -3,7 +3,7 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
-    // Redirect to login page or display an error message
+    //Redirect to login page or display an error message
     header("Location: login.php");
     exit();
 }

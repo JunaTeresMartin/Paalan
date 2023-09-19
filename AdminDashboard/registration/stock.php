@@ -206,7 +206,7 @@
 
     <div class="sidebar">
         <ul>
-            <li><a href="main.php">Home</a></li>
+            <li><a href="/MINIPROJECT_PAALAN_FINAL_2023/Paalan/WorkerDashboard/index.php">Home</a></li>
             
         </ul>
     </div>

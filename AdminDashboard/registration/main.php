@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 
@@ -103,17 +104,13 @@ session_start();
             
             <div class="dropdown-content" for="account-icon">
                 <a href="logout.php">Log out</a>
-                <a href="changepassword.php">Change Password</a>
+                <a href="./changepassword.php">Change Password</a>
             </div>
         </div>
         <div class="welcome-message">
                 Welcome Admin
             </div>
-            <div class="username">
-                <?php 
-                echo ($_SESSION['username']); 
-                ?>
-            </div>
+           
                         
                     </span>
                 </div>
@@ -125,7 +122,7 @@ session_start();
         <div class="col-div-3">
             <div class="box">
             <?php
-        $con = mysqli_connect("localhost", "root", "", "Paalan");
+        $con = mysqli_connect("localhost", "root", "", "paalan");
 
         // Execute the query
         $sql = "SELECT COUNT(*) AS total_count FROM worker_approval";

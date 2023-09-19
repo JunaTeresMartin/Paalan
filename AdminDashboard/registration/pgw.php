@@ -101,6 +101,7 @@ $result = display_data($search);
         table {
             border-collapse: collapse;
             margin-bottom: 150px;
+            width: 100%;
         }
 
         th, td {
@@ -163,7 +164,7 @@ $result = display_data($search);
                                 <table class="table">
                                 <thead>
                                         <tr>
-                                            <th>ID</th>
+                                          
                                             <th>First Name</th>
                                             <th>Last Name</th>
                                             <th>Age</th>

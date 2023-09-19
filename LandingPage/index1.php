@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "Paalan";
+$database = "paalan";
 
 // Create a database connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -78,6 +78,8 @@ function handleMessage($message) {
         'help' => 'Sure, I can help you with information about schemes available for women and child development in India. Please provide the name of the scheme you want to know about.',
         'thank you' => 'You\'re welcome! If you have any more questions, feel free to ask.',
         'New Schemes'=> getAllSchemes(),
+        'new schemes'=> getAllSchemes(),
+        'New schemes'=> getAllSchemes(),
     );
 
     // Check if the message contains any predefined keywords
@@ -122,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Paalan</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">

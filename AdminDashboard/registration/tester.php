@@ -82,6 +82,10 @@
             display: block;
             margin-bottom: 10px;
         }
+        
+        .stock{
+            margin-left: 10px;
+        }
 
         input[type="text"],
         select {
@@ -154,10 +158,18 @@
                 <input type="text" name="panchayath" required>
             </label>
             <br><br>
-            <label>
-                Stock Item:
-                <input type="text" name="stock_item" required>
-            </label>
+            <label class="stock" for="stock_item">Stock Item:</label>
+            <select id="stock_item" name="stock_item" >
+            <option value="">Select an item</option>
+            <option value="payar">payar</option>
+            <option value="kadala">kadala</option>
+            <option value="oil">oil</option>
+            <option value="parippu">parippu</option>
+            <option value="rice">rice</option>
+            <option value="raagi">raagi</option>
+        </select>
+
+
             <br><br>
             <button type="submit">Submit</button>
         </form>

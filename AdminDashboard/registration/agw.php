@@ -147,12 +147,12 @@ $result = display_data();
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <form action="" method="GET" class="mb-3">
+                            <!-- <form action="" method="GET" class="mb-3">
                                 <div class="input-group">
                                     <input type="text" name="search" class="form-control" placeholder="Search by panchayath" value="<?php echo $search; ?>">
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
-                            </form>
+                            </form> -->
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped">
                                     <thead>

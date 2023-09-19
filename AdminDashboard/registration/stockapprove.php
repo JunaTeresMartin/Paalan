@@ -164,7 +164,6 @@
                     <th>ID</th>
                     <th>Stock Item</th>
                     <th>Quantity</th>
-                    <th>Defect Details</th>
                     <th>Action</th>
                 </tr>";
 
@@ -173,7 +172,6 @@
                     <td>" . $row['id'] . "</td>
                     <td>" . $row['stock_item'] . "</td>
                     <td>" . $row['quantity'] . "</td>
-                    <td>" . $row['defect_details'] . "</td>
                     <td>
                         <form method='POST' action='" . $_SERVER['PHP_SELF'] . "'>
                             <input type='hidden' name='request_id' value='" . $row['id'] . "'>
@@ -211,7 +209,7 @@
                     $quantity = $selectRow['quantity'];
                     $defectDetails = $selectRow['defect_details'];
 
-                    $insertSql = "INSERT INTO stock_approved (stock_item, quantity, defect_details) VALUES ('$stockItem', $quantity, '$defectDetails')";
+                    $insertSql = "INSERT INTO stock_approved (stock_item, quantity) VALUES ('$stockItem', $quantity)";
                     if (mysqli_query($conn, $insertSql)) {
                         echo "";
 

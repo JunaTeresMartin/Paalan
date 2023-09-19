@@ -139,7 +139,7 @@ input[type="submit"]:hover {
     // Close the database connection
     mysqli_close($conn);
 ?>
-<a href="#" class="go-back-button">Go Back</a>
+<a href="/MINIPROJECT_PAALAN_FINAL_2023/Paalan/LandingPage/index1.php" class="go-back-button">Go Back</a>
 
 <h1>Worker Registration</h1>
 

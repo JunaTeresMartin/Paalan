@@ -126,6 +126,7 @@ body{
 </head>
 
 <body>
+<a href='/MINIPROJECT_PAALAN_FINAL_2023/Paalan/LandingPage/index1.php'><button class='btn'>Go Back</button></a>
     <div class="container">
         <div class="box form-box">
             <?php if (isset($error)) : ?>

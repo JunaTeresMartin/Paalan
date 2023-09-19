@@ -42,8 +42,14 @@ function handleMessage($message) {
     // Predefined keywords and their corresponding responses
     $keywords = array(
         'hai' => 'Hello, My name is Gayathri. Do you want to know whether stock is available in your panchayath?',
+        'hi' => 'Hello, My name is Gayathri. Do you want to know whether stock is available in your panchayath?',
+        'Hi' => 'Hello, My name is Gayathri. Do you want to know whether stock is available in your panchayath?',
+        'hello' => 'Hello, My name is Gayathri. Do you want to know whether stock is available in your panchayath?',
+        'HI' => 'Hello, My name is Gayathri. Do you want to know whether stock is available in your panchayath?',
+        'Hello' => 'Hello, My name is Gayathri. Do you want to know whether stock is available in your panchayath?',
         'help' => 'Sure, I can help you with information about Stock availability in your panchayath.',
         'thank you' => 'You\'re welcome!',
+        'Thank you' => 'You\'re welcome!',
     );
 
     // Check if the message contains any predefined keywords
@@ -88,14 +94,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://english.mathrubhumi.com/image/contentid/policy:1.8075166:1669261034/anganwadi.jpg?$p=fa92b37&f=16x9&w=1080&q=0.8');
         }
 
         .chat-container {
-            max-width: 600px;
+            max-width: 500px;
             margin: 20px auto;
             background-color: #f4f4f4;
             border-radius: 5px;
             padding: 20px;
+            margin-top: 180px;
         }
 
         .chat-container h2 {

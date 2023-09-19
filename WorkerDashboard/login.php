@@ -47,7 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-    <a href="../LandingPage/index1.php"><img src="icon.jpg" alt="PAALAN Icon" style="width: 24px; height: 24px; position: absolute; top: 10px; left: 10px;"></a>
+    <!-- <a href="../LandingPage/index1.php"><img src="icon.jpg" alt="PAALAN Icon" style="width: 24px; height: 24px; position: absolute; top: 10px; left: 10px;"></a> -->
+    <a href='/MINIPROJECT_PAALAN_FINAL_2023/Paalan/LandingPage/index1.php'><button class='btn'>Go Back</button></a>
 
     <div class="container">
         <div class="box form-box">
